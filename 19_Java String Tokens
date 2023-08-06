@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        // Write your code here.
+        scan.close();
+        String[] tokens = s.split("\\W", 0);
+        List<String> new_tokens = new ArrayList<>();
+        for(int i=0; i<tokens.length; i++){
+            if(tokens[i].length() != 0){
+                new_tokens.add(tokens[i]);
+            }
+        }
+        System.out.println(new_tokens.toArray().length);
+        for(String tk: new_tokens){
+            System.out.println(tk);
+        }
+    }
+}
